@@ -152,8 +152,8 @@ if [[ $PHP_VER == 7* ]]; then
     # Compile
     cd ${PHALCON_DIR}
 
-    ${CI_APP_DIR}/vendor/phalcon/zephir/bin/zephir compile --backend=ZendEngine3
-        
+    ${CI_APP_DIR}/vendor/bin/zephir compile --backend=ZendEngine3
+
     # Install
     cd ${PHALCON_DIR}/ext
     # Using debug flags (Production flags: "-O2 -fvisibility=hidden -Wparentheses -DZEPHIR_RELEASE=1")

@@ -3,9 +3,9 @@
 namespace TechPivot\PhalconCiInstaller\Tests\Phalcon;
 
 use Phalcon\Version;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ModuleTest extends PHPUnit_Framework_TestCase
+class ModuleTest extends TestCase
 {
 
     public function testModuleLoaded()
