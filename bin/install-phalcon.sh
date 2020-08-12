@@ -145,9 +145,8 @@ if [[ $PHP_VER == 7* ]]; then
     # Therefore, since Zephir uses global PHP, ensure we set globally.
     phpenv global ${PHP_VER}
         
-    # Clean parsers
-    cd ${CI_APP_DIR}/vendor/phalcon/zephir/parser
-    phpize --clean
+    # Clean parsers in older versions
+    (cd ${CI_APP_DIR}/vendor/phalcon/zephir/parser && phpize --clean) || true
     
     # Compile
     cd ${PHALCON_DIR}
